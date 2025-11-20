@@ -1,0 +1,10 @@
+[package]
+name = "wrd_collector"
+description = "Worrydong collector"
+authors = ["Duy Huynh <cduyhuynh@gmail.com>"]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.91.0"
+
+[dependencies]
+enigo = "0.6"
