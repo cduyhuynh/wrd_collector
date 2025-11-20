@@ -17,19 +17,20 @@ fn main() {
     let mut enigo = Enigo::new(&Settings::default()).unwrap();
 
     // Ctrl + K
-    let _ = enigo.key(Key::Control, Press);
+    let _ = enigo.key(Key::Meta, Press);
     let _ = enigo.key(Key::Unicode('k'), Click);
-    let _ = enigo.key(Key::Control, Release);
-    thread::sleep(Duration::from_millis(500));
+    let _ = enigo.key(Key::Meta, Release);
+    thread::sleep(Duration::from_millis(1000));
 
     // Type channel name and enter
     let _ = enigo.text(CHANNEL_NAME);
+    thread::sleep(Duration::from_millis(1000));
     let _ = enigo.key(Key::Return, Press);
-    thread::sleep(Duration::from_millis(500));
+    thread::sleep(Duration::from_millis(1000));
 
     // Type message and enter
     let _ = enigo.text(MESSAGE);
-    // enigo.key(Key::Return, Press);
+    let _ = enigo.key(Key::Return, Press);
     thread::sleep(Duration::from_millis(500));
 
     // Wait 2 hours
